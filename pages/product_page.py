@@ -13,7 +13,17 @@ class ProductPage(BasePage):
         name_of_product = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         message = self.browser.find_element(*ProductPageLocators.SUCCESSFULL_MESSAGE).text
         assert name_of_product == message
+
     def should_basket_price_equal_product_price(self):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         basket_price = self.browser.find_element(*ProductPageLocators.BASCKET_PRICE).text
         assert product_price == basket_price
+    
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESSFULL_MESSAGE)
+
+    def should_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESSFULL_MESSAGE)
+    
+
+    

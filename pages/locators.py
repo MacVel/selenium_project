@@ -13,3 +13,12 @@ class ProductPageLocators():
     PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
     BASCKET_PRICE = (By.CSS_SELECTOR,'#messages div:nth-child(3) .alertinner p strong')
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR,"#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR,".btn-group  a.btn-default ")
+
+class BasketPageLocators():
+    STATUS_MESSAGE = (By.CSS_SELECTOR,'#content_inner p')
+    PRODUCT_IN_BASKET = (By.CSS_SELECTOR,'.basket_summary')
